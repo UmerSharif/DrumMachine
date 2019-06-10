@@ -7,3 +7,79 @@
 body {
   font-family: "Raleway", sans-serif;
 }
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 50px 0 30px 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+.pads {
+  background: lightblue;
+  width: 100%;
+  display: flex;
+}
+
+.pads > div {
+  height: 100px;
+  width: 100px;
+  flex: 1;
+}
+
+.pad1 {
+  background: #60d394;
+}
+
+.pad2 {
+  background: #bad867;
+}
+.pad3 {
+  background: #8463b8;
+}
+.pad4 {
+  background: #e67dae;
+}
+.pad5 {
+  background: #72b5e2;
+}
+.pad6 {
+  background: #e49e76;
+}
+
+/* keyframes for bubble */
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+  }
+  100% {
+    bottom: 0%;
+    left: 80%;
+  }
+}
+
+.visual > div {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  bottom: 0%;
+  z-index: -1;
+}
