@@ -19,22 +19,22 @@ window.addEventListener("load", () => {
       let padleft = pad.getBoundingClientRect().left;
       let padtop = pad.getBoundingClientRect().top;
       let padwidth = pad.getBoundingClientRect().width;
-      let padheight = pad.getBoundingClientRect().height;
 
-      createBalls(index, padleft, padtop, padwidth, padheight);
+      createBalls(index, padleft, padtop, padwidth);
     });
   });
 
   //create bubbles
-  const createBalls = (index, padleft, padtop, padwidth, padheight) => {
+  const createBalls = (index, padleft, padtop, padwidth) => {
     const ball = document.createElement("div");
     visual.appendChild(ball);
+    //getting width of the ball div created above
     let halfBallWidth = ball.getBoundingClientRect().width / 2;
     ball.style.backgroundColor = colors[index];
+    //positioning ball to the center of the pad
     ball.style.left = padleft + padwidth / 2 - halfBallWidth + "px";
     ball.style.top = padtop + "px";
-    console.log(padleft, padwidth);
-    ball.style.animation = "jump 1.6s ease-in-out";
+    ball.style.animation = "jump 1.5s ease-in-out";
     ball.addEventListener("animationend", function() {
       visual.removeChild(this);
     });
