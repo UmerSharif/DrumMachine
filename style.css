@@ -62,16 +62,19 @@ header p {
 
 @keyframes jump {
   0% {
-    bottom: 0%;
-    left: 20%;
-  }
-  50% {
     bottom: 50%;
-    left: 50%;
+    /* left: 20%; */
+    top: 100%;
   }
+
+  /* 50% {
+    bottom: 0%;
+    top: 50%;
+  } */
+
   100% {
     bottom: 0%;
-    left: 80%;
+    top: 50%;
   }
 }
 
@@ -81,5 +84,5 @@ header p {
   width: 50px;
   border-radius: 50%;
   bottom: 0%;
-  z-index: -1;
+  /* z-index: -1; */
 }

@@ -15,16 +15,23 @@ window.addEventListener("load", () => {
     pad.addEventListener("click", function() {
       sounds[index].currentTime = 0;
       sounds[index].play();
-      createBalls(index);
+      //geting position of the pad
+      let padleft = pad.getBoundingClientRect().left;
+      let padtop = pad.getBoundingClientRect().top;
+
+      createBalls(index, padleft, padtop);
     });
   });
 
   //create bubbles
-  const createBalls = index => {
+  const createBalls = (index, padleft, padtop) => {
     const ball = document.createElement("div");
     visual.appendChild(ball);
     ball.style.backgroundColor = colors[index];
-    ball.style.animation = "jump 1s ease";
+    ball.style.left = padleft + "px";
+    ball.style.top = padtop + "px";
+    console.log(padtop);
+    ball.style.animation = "jump 1.5s ease";
     ball.addEventListener("animationend", function() {
       visual.removeChild(this);
     });
