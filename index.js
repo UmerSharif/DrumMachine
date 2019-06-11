@@ -31,7 +31,7 @@ window.addEventListener("load", () => {
     ball.style.left = padleft + "px";
     ball.style.top = padtop + "px";
     console.log(padtop);
-    ball.style.animation = "jump 1.5s ease";
+    ball.style.animation = "jump 1.6s ease-in-out";
     ball.addEventListener("animationend", function() {
       visual.removeChild(this);
     });

@@ -6,6 +6,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
+  overflow: hidden;
 }
 
 .app {
@@ -62,14 +63,14 @@ header p {
 
 @keyframes jump {
   0% {
-    bottom: 50%;
+    bottom: 60%;
     /* left: 20%; */
     top: 100%;
   }
 
   50% {
     bottom: 0%;
-    top: 50%;
+    top: 40%;
   }
 
   100% {
